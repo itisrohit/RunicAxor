@@ -31,8 +31,8 @@ jobs:
     - name: Log in to Docker Hub
       uses: docker/login-action@v2
       with:
-        username: ${{ secrets.DOCKER_USERNAME }}  # Use your Docker Hub username stored as a secret
-        password: ${{ secrets.DOCKER_PASSWORD }}  # Use your Docker Hub password stored as a secret
+        username: ${{ secrets.DOCKER_USERNAME }}  # Docker Hub username from secrets
+        password: ${{ secrets.DOCKER_PASSWORD }}  # Docker Hub Personal Access Token (PAT) from secrets
 
     - name: Build and Push Docker image for ${{ matrix.language }}
       uses: docker/build-push-action@v2
