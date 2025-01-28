@@ -1,6 +1,6 @@
 # RunicAxor  
 
-RunicAxor is a lightweight code execution engine that uses Docker containers to securely execute code in isolated environments. It currently supports **JavaScript** and **Python**.  
+RunicAxor is a lightweight code execution engine that uses Docker containers to securely execute code in isolated environments. It currently supports **NodeJs** and **Python**.  
 
 ## Features  
 - Secure execution of code with resource constraints (memory, CPU, and no network access).  
