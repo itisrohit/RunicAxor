@@ -17,7 +17,7 @@ RunicAxor is a lightweight code execution engine that uses Docker containers to 
 
 1. Clone the repository:  
    ```bash  
-   git clone https://github.com/your-username/RunicAxor.git  
+   git clone https://github.com/itisrohit/RunicAxor.git  
    cd RunicAxor  
    ```  
 
@@ -28,13 +28,13 @@ RunicAxor is a lightweight code execution engine that uses Docker containers to 
 
 3. Build the Docker images for supported languages:  
    ```bash  
-   docker build -t code-engine-javascript ./code-engine-images/nodejs  
+   docker build -t code-engine-nodejs ./code-engine-images/nodejs  
    docker build -t code-engine-python ./code-engine-images/python  
    ```  
 
 4. Start the server:  
    ```bash  
-   npm start  
+   npm run dev  
    ```  
 
 ## API Usage  
@@ -69,7 +69,7 @@ Send a JSON payload:
   ```  
 
 ## Supported Languages  
-- **JavaScript**  
+- **NodeJs**  
 - **Python**  
 
 ## Contributing  
