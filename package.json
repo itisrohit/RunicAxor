@@ -1,5 +1,32 @@
 {
   "dependencies": {
-    "docker": "^1.0.0"
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "docker": "^1.0.0",
+    "dockerode": "^4.0.4",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  },
+  "name": "runicaxor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itisrohit/RunicAxor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itisrohit/RunicAxor/issues"
+  },
+  "homepage": "https://github.com/itisrohit/RunicAxor#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
   }
 }
