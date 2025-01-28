@@ -1,5 +1,5 @@
 # Use GCC Alpine base
-FROM gcc:12.3-alpine
+FROM gcc:12.2.0
 
 # ===== SECURITY HARDENING =====
 # Create restricted user
