@@ -11,7 +11,7 @@ jobs:
 
     strategy:
       matrix:
-        language: [javascript, python, cpp]  # Define a matrix to build for each language
+        language: [nodejs, python]  # Define a matrix to build for each language
 
     steps:
     - name: Checkout code
