@@ -40,4 +40,5 @@ jobs:
         context: .  # Set the context to the root of the repository
         file: ./code-engine-images/${{ matrix.language }}/Dockerfile  # Path to the specific Dockerfile based on the matrix
         push: true  # Push the built image to Docker Hub
-        tags: your-dockerhub-username/code-engine-${{ matrix.language }}:latest  # Tag the image based on language
+        tags: |
+          itisrohit/code-engine-${{ matrix.language }}:latest  # Tag the image with the language name and 'latest'
