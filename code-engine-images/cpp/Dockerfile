@@ -26,5 +26,5 @@ RUN apk add --no-cache \
 USER runner
 
 # Security wrapper script
-COPY --chown=runner:runner cpp-sandbox.sh /app/
+COPY --chown=runner:runner cpp/cpp-sandbox.sh /app/
 ENTRYPOINT ["/app/cpp-sandbox.sh"]

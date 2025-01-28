@@ -1,3 +1,5 @@
+# Ignore the code-engine-images/cpp directory
+code-engine-images/cpp/
 # Logs
 logs
 *.log
