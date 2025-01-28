@@ -1,0 +1,43 @@
+name: Build and Push Docker Images
+
+on:
+  push:
+    branches:
+      - main  # Trigger when changes are pushed to the main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Runs on a fresh Ubuntu virtual machine
+
+    strategy:
+      matrix:
+        language: [javascript, python, cpp]  # Define a matrix to build for each language
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2  # Checks out your code to the action runner
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2  # Sets up Docker Buildx for multi-platform builds
+
+    - name: Cache Docker layers
+      uses: actions/cache@v2
+      with:
+        path: /tmp/.buildx-cache
+        key: ${{ runner.os }}-buildx-${{ github.sha }}
+        restore-keys: |
+          ${{ runner.os }}-buildx-
+
+    - name: Log in to Docker Hub
+      uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}  # Use your Docker Hub username stored as a secret
+        password: ${{ secrets.DOCKER_PASSWORD }}  # Use your Docker Hub password stored as a secret
+
+    - name: Build and Push Docker image for ${{ matrix.language }}
+      uses: docker/build-push-action@v2
+      with:
+        context: .  # Set the context to the root of the repository
+        file: ./code-engine-images/${{ matrix.language }}/Dockerfile  # Path to the specific Dockerfile based on the matrix
+        push: true  # Push the built image to Docker Hub
+        tags: your-dockerhub-username/code-engine-${{ matrix.language }}:latest  # Tag the image based on language
