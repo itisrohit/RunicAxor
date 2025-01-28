@@ -1,5 +1,9 @@
-# Ignore the code-engine-images/cpp directory
-code-engine-images/cpp/
+# Ignore the workers/docker/cpp/ directory
+workers/docker/cpp/
+
+# Ignore the workers/docker/cpp/ directory
+docs
+
 # Logs
 logs
 *.log
